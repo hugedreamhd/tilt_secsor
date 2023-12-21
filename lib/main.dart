@@ -13,7 +13,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
@@ -30,7 +29,6 @@ class SensorApp extends StatelessWidget {
     final centerX = MediaQuery.of(context).size.width / 2 - 50;
     final centerY = MediaQuery.of(context).size.height / 2 - 50;
 
-
     return Scaffold(
       body: Stack(
         children: [
@@ -38,7 +36,11 @@ class SensorApp extends StatelessWidget {
             left: centerX,
             top: centerY,
             child: Container(
-              color: Colors.red,
+              decoration: const BoxDecoration(
+                color: Colors.green,
+                shape: BoxShape.circle, //컬러가 널이거나 데코레이션이 널이면 오류
+              ),
+              //color: Colors.red, 중복된 컬러라 오류남
               width: 100,
               height: 100,
             ),
@@ -48,4 +50,3 @@ class SensorApp extends StatelessWidget {
     );
   }
 }
-
