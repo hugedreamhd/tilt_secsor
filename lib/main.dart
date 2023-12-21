@@ -30,6 +30,7 @@ class SensorApp extends StatelessWidget {
     final centerX = MediaQuery.of(context).size.width / 2 - 50;
     final centerY = MediaQuery.of(context).size.height / 2 - 50;
 
+
     return Scaffold(
       body: Stack(
         children: [
